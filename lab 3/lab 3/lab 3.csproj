@@ -42,7 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cliente.cs" />
+    <Compile Include="Bus.cs" />
+    <Compile Include="Acuatico.cs" />
+    <Compile Include="Arriendo.cs" />
+    <Compile Include="Empresa.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Extra.cs" />
+    <Compile Include="Maquinaria.cs" />
+    <Compile Include="Camion.cs" />
+    <Compile Include="Moto.cs" />
+    <Compile Include="Auto.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace lab_3
 {
-    public class Program
+    public class Empresa:Cliente
     {
-        static void Main(string[] args)
+        public Empresa(string miNombre, string miRut, string miLicencia, int miNumero) : base(miNombre, miLicencia, miNumero, miRut)
         {
+
+
         }
     }
 }

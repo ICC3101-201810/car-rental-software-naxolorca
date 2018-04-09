@@ -18,12 +18,5 @@ namespace lab_3
 
         }
 
-        public void Arrendar(Vehiculo vehiculo,Persona cliente)
-        {
-
-        }
-
-
-
     }
 }

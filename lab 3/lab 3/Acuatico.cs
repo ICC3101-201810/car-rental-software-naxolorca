@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace lab_3
 {
-    public class Persona : Cliente
+    public class Acuatico:Vehiculo
     {
         
-        public Persona(string miNombre, string miRut, string miLicencia, int miNumero) :base(miNombre,miLicencia,miNumero,miRut)
+        public Acuatico(string miPatente, string miLicencia, int miAno, int miCosto) : base(miPatente, miLicencia, miAno, miCosto)
         {
- 
 
         }
-
-
-
     }
 }

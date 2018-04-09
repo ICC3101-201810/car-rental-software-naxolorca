@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace lab_3
 {
-    public class Program
+    public class Moto:Vehiculo
     {
-        static void Main(string[] args)
+        public Moto(string miPatente, string miLicencia, int miAno, int miCosto) : base(miPatente, miLicencia, miAno, miCosto)
         {
+
         }
     }
 }
