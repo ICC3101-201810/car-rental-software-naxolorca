@@ -8,9 +8,11 @@ namespace lab_3
 {
     public class Persona : Cliente
     {
+        public string licencia;
         
-        public Persona(string miNombre, string miRut, string miLicencia, int miNumero) :base(miNombre,miLicencia,miNumero,miRut)
+        public Persona(string miNombre, string miRut, int miNumero,string miLicencia) :base(miNombre,miRut,miNumero)
         {
+            licencia = miLicencia;
  
 
         }

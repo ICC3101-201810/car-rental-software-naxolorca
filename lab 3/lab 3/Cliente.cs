@@ -8,15 +8,16 @@ namespace lab_3
 {
     public class Cliente
     {
-        public string nombre, rut, licencia;
+        public string nombre, rut;
         public int numero;
 
-        public Cliente(string miNombre,string miRut,string miLicencia,int miNumero)
+        public Cliente(string miNombre,string miRut,int miNumero,List<string> licencias )
         {
             nombre = miNombre;
             rut = miRut;
-            licencia = miLicencia;
             numero = miNumero;
+            licencias = new List<string>();
+
 
 
         }

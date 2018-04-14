@@ -7,20 +7,16 @@ using System.Threading.Tasks;
 namespace lab_3
 {
 
-    public class Vehiculo
+    public abstract class Vehiculo
     {
-        public string patente,licencia;
-        public int ano,costo;
-
-       
-        
-        public Vehiculo(string miPatente,string miLicencia,int miAno,int miCosto)
+        public string patente, licencia;
+        public int ano, costo;
+        public Vehiculo(string miPatente,string miLicencia, int miAno, int miCosto)
         {
             patente = miPatente;
-            licencia = miLicencia;
             ano = miAno;
+            licencia = miLicencia;
             costo = miCosto;
         }
-
     }
 }
