@@ -9,11 +9,12 @@ namespace lab_3
     public class Bus :Vehiculo
 
     {
+        string tipo;
 
-        public Bus(string miPatente, string miLicencia, int miAno, int miCosto) : base(miPatente, miLicencia, miAno, miCosto)
+        public Bus(string miPatente, string miLicencia, int miAno, int miCosto,string miTipo) : base(miPatente, miLicencia, miAno, miCosto)
         {
-
-
+            tipo = miTipo;
+            
         }
     }
 }

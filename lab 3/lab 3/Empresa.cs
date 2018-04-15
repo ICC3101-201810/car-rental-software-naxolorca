@@ -8,10 +8,10 @@ namespace lab_3
 {
     public class Empresa:Cliente
     {
-        public string permiso;
-        public Empresa(string miNombre, string miRut, int miNumero,string miPermiso) : base(miNombre, miRut, miNumero)
+
+        public Empresa(string miNombre, string miRut, int miNumero,List<String> licencias,bool permiso) : base(miNombre, miRut, miNumero,licencias,permiso)
         {
-            miPermiso = permiso;
+
 
         }
     }

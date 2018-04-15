@@ -14,7 +14,7 @@ namespace lab_3
         public Vehiculo vehiculo;
         List<Extra> extras;
  
-        public Arriendo(DateTime miDia,DateTime miFin, Cliente miCliente, Vehiculo miVehiculo)
+        public Arriendo(DateTime miDia,DateTime miFin, Cliente miCliente, Vehiculo miVehiculo,List<Extra> extras)
         {
             dia = miDia;
             fin = miFin;
