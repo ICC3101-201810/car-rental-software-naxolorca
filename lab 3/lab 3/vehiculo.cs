@@ -11,12 +11,14 @@ namespace lab_3
     {
         public string patente, licencia;
         public int ano, costo;
-        public Vehiculo(string miPatente,string miLicencia, int miAno, int miCosto)
+        public Vehiculo(string miPatente, string miLicencia, int miAno, int miCosto)
         {
             patente = miPatente;
             ano = miAno;
             licencia = miLicencia;
             costo = miCosto;
         }
+
+
     }
 }
