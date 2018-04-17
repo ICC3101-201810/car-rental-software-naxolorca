@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,7 +26,7 @@ namespace lab_3
             List<Sucursal> sucursales = new List<Sucursal>();
             while (true)
             {
-                
+                Console.BackgroundColor = ConsoleColor.Blue;
                 Console.WriteLine("1. Agregar una sucursal \n2. Ver sucursales");
 
                 string R = Console.ReadLine();
@@ -60,7 +61,7 @@ namespace lab_3
                     }
                                       
                 }
-                if (R == "2")
+                if (R == "2"&& sucursales.Count>0)
                 {
                     int n = 1;
                     foreach (Sucursal su in sucursales)
@@ -70,7 +71,7 @@ namespace lab_3
                     }
                     Console.WriteLine("Ingrese la sucursal");
                     int respSu = Convert.ToInt32(Console.ReadLine());
-                    Sucursal SuElegida= sucursales[respSu - 1];
+                    Sucursal SuElegida = sucursales[respSu - 1];
 
                     while (true)
                     {
@@ -96,6 +97,7 @@ namespace lab_3
                             Console.WriteLine("Ingrese dias de arriendo");
                             int fin = Convert.ToInt32(Console.ReadLine());
                             SuElegida.Arrendar(cliente, SuElegida.disponibles[vehiElegido - 1], DateTime.Now, DateTime.Today.AddDays(fin), new List<Extra> { });
+                            SystemSounds.Asterisk.Play();
                             SuElegida.disponibles.Remove(SuElegida.disponibles[vehiElegido - 1]);
 
                         }
@@ -109,13 +111,17 @@ namespace lab_3
                             {
                                 Console.WriteLine(ve.patente);
                                 SuElegida.disponibles.Add(ve);
-                                
+                                SystemSounds.Asterisk.Play();
+
                             }
        
                             
                             
                         }
-                        
+                        if (R2 == 3)
+                            break;
+
+
 
                     }
                     
