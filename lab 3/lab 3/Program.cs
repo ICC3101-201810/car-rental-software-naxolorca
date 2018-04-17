@@ -22,17 +22,10 @@ namespace lab_3
             Console.ReadKey();
 
 
-
-            public void CrearVehiculo(string patente,string licencia,int ano,int precio)
-            {
-                Vehiculo a = new Vehiculo(patente, licencia, ano, precio);
-
-                return a;
-            }
-        
+            List<Sucursal> sucursales = new List<Sucursal>();
             while (true)
             {
-                List<Sucursal> sucursales = new List<Sucursal>();
+                
                 Console.WriteLine("1. Agregar una sucursal \n2. Ver sucursales");
 
                 string R = Console.ReadLine();
@@ -43,8 +36,8 @@ namespace lab_3
                     string nombre = Console.ReadLine();
                     Console.WriteLine("ingrese ubicacion de la sucursal");
                     string ubicacion = Console.ReadLine();
-                    Console.WriteLine("ingrese ubicacion de la sucursal");
                     sucursales.Add(new Sucursal(nombre, ubicacion, new List<Arriendo> { }, new List<Vehiculo> { }));
+                    Console.WriteLine(sucursales.Count);
                     while (true)
                     {
                         Console.WriteLine("ingrese patente del vehiculo");
@@ -55,19 +48,30 @@ namespace lab_3
                         int ano = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine("ingrese valor del vehiculo");
                         int valor = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Indique el tipo de Vehiculo\n1. Auto\n2. Bus\n3. Camion\n4. Bus liviano\n5. Bus de lujo\n6. Maquinaria Pesada\n7. Moto");
+                        int tipo = Convert.ToInt32(Console.ReadLine());
+                        Sucursal s = sucursales[sucursales.Count - 1];
+                        s.CrearVehiculo(tipo, patente, licencia, ano, valor, s);
 
-                        sucursales.Add(new Sucursal(nombre, ubicacion, new List<Arriendo> { }, new List<Vehiculo> { }));
+                        Console.WriteLine("Desea Agregar otro vehiculo\n1. Si\n2. No");
+                        int seguir = Convert.ToInt32(Console.ReadLine());
+                        if (seguir == 2)
+                            break;
+
                     }
-
+                                      
                 }
-
-
-
-                if (R == "si" && R == "Si" && R == "SI")
+                if (R == "2")
                 {
+                    foreach (Sucursal su in sucursales)
+                    {
+                        Console.WriteLine(su.nombre);
 
-
+                    }
+                    
                 }
+
+           
             }
         }
     }
