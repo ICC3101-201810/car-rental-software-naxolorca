@@ -98,6 +98,7 @@ namespace lab_3
                             int fin = Convert.ToInt32(Console.ReadLine());
                             SuElegida.Arrendar(cliente, SuElegida.disponibles[vehiElegido - 1], DateTime.Now, DateTime.Today.AddDays(fin), new List<Extra> { });
                             SystemSounds.Asterisk.Play();
+                            Console.Beep();
                             SuElegida.disponibles.Remove(SuElegida.disponibles[vehiElegido - 1]);
 
                         }
@@ -112,6 +113,7 @@ namespace lab_3
                                 Console.WriteLine(ve.patente);
                                 SuElegida.disponibles.Add(ve);
                                 SystemSounds.Asterisk.Play();
+                                Console.Beep();
 
                             }
        
