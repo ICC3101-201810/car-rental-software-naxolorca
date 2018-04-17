@@ -20,18 +20,25 @@ namespace lab_3
 
         }
 
-        public void AgregarVehiculo(Sucursal sucursal,Vehiculo vehiculo)
+        public void CrearVehiculo(int tipo, string patente, string licencia, int ano, int precio,Sucursal s)
         {
-            if (sucursal.disponibles.Contains(vehiculo))
-            {
-                Console.WriteLine("Este Vehiculo ya existe");
-            }
-            else
-            {
-                sucursal.disponibles.Add(vehiculo);
-            }
-            
-        }
+            if(tipo == 1)
+                s.disponibles.Add(new Auto(patente, licencia, ano, precio));
+            if (tipo == 2)
+                s.disponibles.Add(new Normal(patente, licencia, ano, precio));
+            if (tipo == 3)
+                s.disponibles.Add(new Camion(patente, licencia, ano, precio));
+            if (tipo == 4)
+                s.disponibles.Add(new Liviano(patente, licencia, ano, precio));
+            if (tipo == 5)
+                s.disponibles.Add(new Lujo(patente, licencia, ano, precio));
+            if (tipo == 6)
+                s.disponibles.Add(new Maquinaria(patente, licencia, ano, precio));
+            if (tipo == 7)
+                s.disponibles.Add(new Moto(patente, licencia, ano, precio));
+       
+        }           
+        
 
         public void Arrendar(Cliente cliente, Vehiculo vehiculo, DateTime dia, DateTime fin,List<Extra> extras)
         {
@@ -49,9 +56,8 @@ namespace lab_3
                 Console.WriteLine(arriendo.vehiculo.ano);
                 Console.WriteLine(arriendo.vehiculo.costo);
                 Console.WriteLine(arriendo.fin);
-                Console.WriteLine(Convert.ToString(vehiculo));
                 
-                Console.ReadKey();
+
 
             }
 
@@ -62,6 +68,7 @@ namespace lab_3
                 if (muni <= 63 && cliente.licencias.Contains(vehiculo.licencia))
                 {
                     Arriendo arriendo = new Arriendo(dia, fin, cliente, vehiculo, extras);
+                    arriendos.Add(arriendo);
                 }
 
             }
@@ -73,6 +80,7 @@ namespace lab_3
                 if (muni <= 80 && cliente.licencias.Contains(vehiculo.licencia))
                 {
                     Arriendo arriendo = new Arriendo(dia, fin, cliente, vehiculo, extras);
+                    arriendos.Add(arriendo);
                 }
 
             }
@@ -84,6 +92,7 @@ namespace lab_3
                 if (muni <= 35 && cliente.licencias.Contains(vehiculo.licencia) )
                 {
                     Arriendo arriendo = new Arriendo(dia, fin, cliente, vehiculo, extras);
+                    arriendos.Add(arriendo);
                 }
 
             }
@@ -95,6 +104,7 @@ namespace lab_3
                 if (muni <= 58 && cliente.licencias.Contains(vehiculo.licencia))
                 {
                     Arriendo arriendo = new Arriendo(dia, fin, cliente, vehiculo, extras);
+                    arriendos.Add(arriendo);
                 }
 
             }
