@@ -48,10 +48,15 @@
     <Compile Include="Empresa.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Extra.cs" />
+    <Compile Include="Institucion.cs" />
+    <Compile Include="Liviano.cs" />
+    <Compile Include="Lujo.cs" />
     <Compile Include="Maquinaria.cs" />
     <Compile Include="Camion.cs" />
     <Compile Include="Moto.cs" />
     <Compile Include="Auto.cs" />
+    <Compile Include="Normal.cs" />
+    <Compile Include="Organizacion.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -12,15 +12,15 @@ namespace lab_3
         public DateTime dia,fin;
         public Cliente cliente;
         public Vehiculo vehiculo;
-        List<Extra> extras;
+        public List<Extra> extras;
  
-        public Arriendo(DateTime miDia,DateTime miFin, Cliente miCliente, Vehiculo miVehiculo)
+        public Arriendo(DateTime miDia,DateTime miFin, Cliente miCliente, Vehiculo miVehiculo,List<Extra> miExtras)
         {
             dia = miDia;
             fin = miFin;
             cliente = miCliente;
             vehiculo = miVehiculo;
-            extras = new List<Extra>();
+            extras = miExtras;
 
         }
 

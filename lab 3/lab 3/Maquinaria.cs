@@ -8,6 +8,7 @@ namespace lab_3
 {
     public class Maquinaria:Vehiculo
     {
+       
 
         public Maquinaria(string miPatente, string miLicencia, int miAno, int miCosto) : base(miPatente, miLicencia, miAno, miCosto)
         {

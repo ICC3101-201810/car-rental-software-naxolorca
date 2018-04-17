@@ -10,13 +10,17 @@ namespace lab_3
     {
         public string nombre, rut;
         public int numero;
+        public List<string> licencias;
+        public bool permiso;
 
-        public Cliente(string miNombre,string miRut,int miNumero,List<string> licencias )
+        public Cliente(string miNombre,string miRut,int miNumero,List<String>miLicencias,bool miPermiso)
         {
             nombre = miNombre;
             rut = miRut;
             numero = miNumero;
-            licencias = new List<string>();
+            licencias = miLicencias;
+            permiso = miPermiso;
+
 
 
 
